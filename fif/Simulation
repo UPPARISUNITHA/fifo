@@ -1,0 +1,7 @@
+initial begin
+
+    $dumpfile("fifo.vcd");
+    $dumpvars(0, fifo_tb);
+
+    $monitor("Time=%0t | Reset=%b | WR=%b | RD=%b | Data_in=%h | Data_out=%h | Full=%b | Empty=%b",
+             $time, reset, wr_en, rd_en, data_in, data_out, full, empty);
